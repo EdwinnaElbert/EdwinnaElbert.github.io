@@ -18,4 +18,5 @@ $(document).ready(function() {
   $('.jquery').css('width', '65%');
   $('.git').css('width', '70%');
   $('.linux').css('width', '55%');
+  $('.php').css('width', '7%');
 });
