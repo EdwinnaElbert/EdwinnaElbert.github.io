@@ -1,0 +1,106 @@
+.form {
+  display: block;
+  margin: auto;
+  background-color: $dark-100;
+  width: 540px;
+  box-sizing: border-box;
+  padding: 32px 65px 50px;
+  box-shadow: 0 0 32.8px 16.2px rgba(38, 46, 57, 0.14);
+
+  @include respond-to(sm) {
+    width: 100%;
+  }
+
+  @include respond-to(xs) {
+    padding: 30px 15px 40px;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    color: rgba(white, .5);
+    line-height: 1.71;
+    margin: 0;
+    margin-bottom: 35px;
+    text-align: center;
+
+    &-line {
+      display: block;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__inputs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &-item {
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__submit {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: $ff-sans;
+    font-size: 16px;
+    line-height: 100%;
+    background-color: $contrast;
+    border: none;
+    cursor: pointer;
+    background-position: 0;
+
+    &:hover {
+      background-color: darken($contrast, 10%);
+    }
+
+    &:active {
+      background-color: darken($contrast, 20%);
+    }
+
+    @keyframes pending {
+      0% {
+        background-position: -29px;
+      }
+
+      100% {
+        background-position: 0;
+      }
+    }
+
+    &--pending {
+      background-image: repeating-linear-gradient(45deg, darken($contrast, 20%), darken($contrast, 20%) 10px, darken($contrast, 10%) 10px, darken($contrast, 10%) 20px);
+      background-position: 0;
+      background-size: 200%;
+      animation-name: pending;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+
+    &--disabled {
+      background-color: rgb(135, 149, 153);
+      opacity: .6;
+
+      &:hover {
+        background-color: rgb(135, 149, 153);
+        color: white;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

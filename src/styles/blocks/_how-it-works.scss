@@ -1,0 +1,85 @@
+.how-it-works {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 112px;
+  padding-bottom: 110px;
+
+  background-color: $dark-100;
+
+  @include respond-to(sm) {
+    background-image: radial-gradient(circle at 50% 80%, rgba($dark-100, .7) 5%, rgba($dark-100, 1) 40%), url('../assets/imgs/how-it-works-img.jpg');
+    background-size: 100%, 700px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+
+  &__heading {
+    margin-top: 9px;
+
+    @include respond-to(sm) {
+      margin-bottom: 60px;
+      margin-top: 0;
+      padding-left: 47px;
+    }
+  }
+
+  & .ordered-list__counter:before {
+    left: -62px;
+    top: -7px;
+
+    background-color: #3c434d;
+
+    @include respond-to(sm) {
+      left: -23px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 96px;
+    right: 104px;
+
+    width: 705px;
+    height: 579px;
+
+    background-image: url('../assets/imgs/how-it-works-img.jpg');
+    background-size: 705px 579px;
+
+    @include respond-to(sm) {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+    padding-left: 10px;
+    list-style: none;
+
+    &-item {
+      @include respond-to(sm) {
+        padding-left: 40px;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-heading {
+      font-size: 20px;
+      line-height: 100%;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
