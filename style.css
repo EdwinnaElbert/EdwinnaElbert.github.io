@@ -115,7 +115,7 @@ hr {
 .sec-main {
   position: relative;
   height: 560px;
-  background: url('resume-images/workspace.jpg') no-repeat center center;
+  background: url('resume-images/workspace.png') no-repeat center center;
   background-size: cover;
 }
 .sec-main:after {
